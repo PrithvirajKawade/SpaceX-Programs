@@ -200,9 +200,6 @@ button:hover {
 }
 
 @media (min-width: 700px) and (max-width: 1024px) {
-  .header {
-    background-color: red;
-  }
   .card-grid {
     justify-content: center;
   }
