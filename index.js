@@ -2,14 +2,15 @@ const cardGrid = document.querySelector(".card-grid");
 const years = document.querySelectorAll(".year");
 const resetCard = document.querySelectorAll(".card");
 const content = document.querySelector(".content");
-const launchSuccessButton = document.querySelector(".launch-button-true");
+const launchSuccessTrue = document.querySelector(".launch-button-true");
 const launchSuccessFalse = document.querySelector(".launch-button-false");
-const launchAndLandButton = document.querySelector(".landing-button-true");
+const landSuccessTrue = document.querySelector(".landing-button-true");
 const launchAndLandFalse = document.querySelector(".landing-button-false");
+
 // const loadResults = document.querySelector("")
 
-launchAndLandButton.addEventListener("click", onLaunchAndLand);
-launchSuccessButton.addEventListener("click", onLaunchSuccess);
+landSuccessTrue.addEventListener("click", onLaunchAndLand);
+launchSuccessTrue.addEventListener("click", onLaunchSuccess);
 
 //false landing filter function
 async function onLaunchFalse() {
@@ -68,6 +69,7 @@ function pageLoadHandler(data) {
 }
 
 async function onLaunchSuccess() {
+  content.classList.add("loading");
   const launchSuccess = await fetch(
     "https://api.spacexdata.com/v3/launches?limit=100&launch_success=true"
   );
@@ -77,6 +79,7 @@ async function onLaunchSuccess() {
 
 //on launch and land click
 async function onLaunchAndLand() {
+  content.classList.add("loading");
   const launchAndLand = await fetch(
     "https://api.spacexdata.com/v3/launches?limit=100&launch_success=true&land_success=true"
   );
