@@ -1,0 +1,161 @@
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.98rem;
+}
+
+.header {
+  background-color: #e7e5e4;
+  padding: 1rem;
+  margin: 0;
+}
+.container {
+  display: flex;
+  background-color: #e7e5e4;
+  height: 100vh;
+  position: relative;
+}
+
+.no-results {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 3rem;
+  left: 22rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.tile-image {
+  height: 10rem;
+  width: 10rem;
+  margin: auto;
+  background-color: #e7e5e4;
+}
+
+.card-grid {
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 1300px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin-top: 0;
+  padding-top: 0;
+  background-color: #e7e5e4;
+}
+
+.left-column {
+  /* margin: 1rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 16rem;
+  background-color: white;
+  min-width: 14.5rem;
+}
+
+.year-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+button {
+  margin: 0.8rem 0.5rem 0 0.4rem;
+  padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+  background-color: #d9f99d;
+  width: 3.5rem;
+  border-radius: 0.6rem;
+  outline: none;
+  border: 0.1px solid black;
+  cursor: pointer;
+}
+
+.launch-section,
+.landing-section {
+  width: 100%;
+}
+
+button:hover {
+  background-color: #84cc16;
+}
+
+/* .launch-button,
+.landing-button {
+} */
+
+.filters {
+  width: 10rem;
+}
+
+.card {
+  width: 11rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+  font-weight: 600;
+  background-color: white;
+  padding: 2rem;
+  margin: 0 1rem 2rem 1rem;
+}
+
+.s-launch {
+  margin: auto;
+}
+
+.s-landing {
+  margin: auto;
+}
+
+.s-launch p,
+.s-landing p {
+  /* width: 9.5rem; */
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid black;
+}
+
+.launch-year {
+  margin: 0;
+}
+
+.launch-header {
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+  border-bottom: 1px solid black;
+}
+
+.mission-name {
+  color: rgb(12, 79, 143);
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.image-container {
+  display: flex;
+}
+
+.content.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.content.loading::after {
+  visibility: visible;
+  content: "Loading...";
+  color: black;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 2rem;
+  left: 10%;
+  font-weight: 600;
+}
